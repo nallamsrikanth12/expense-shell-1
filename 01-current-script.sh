@@ -7,3 +7,4 @@ echo "process id of current shell script: $$"
 
 echo "after calling other script,course:$COURSE"
 
+echo "srikanth"
