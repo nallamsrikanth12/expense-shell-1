@@ -12,7 +12,7 @@ else
     echo " you are super user"
 fi 
 
-dnf install git -y
+dnf install gitt -y
 
 echo -e " $Y srikanth $N"
 
