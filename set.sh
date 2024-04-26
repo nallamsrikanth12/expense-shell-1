@@ -4,11 +4,11 @@ USERID=$(id -u)
 
 set -e
 
-handle_error(){
-    echo "error occure at line $1 : $2"
+failure(){
+    echo "Failed at $1: $2"
 }
 
-trap 'handle_error ${LINENO} "${BASH}_COMMAND"' ERR
+trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
 Y="\e[33m"
 N="\e[0m"
 
