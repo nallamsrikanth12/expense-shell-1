@@ -15,4 +15,4 @@ else
     echo -e " $R create a file  $N" 
 fi
 
-FILES=(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
+FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
