@@ -12,7 +12,7 @@ trap 'handle_error ${LINENO} "${BASH}_COMMAND"' ERR
 Y="\e[33m"
 N="\e[0m"
 
-if [ $USERID -ne 0 ]
+if [ $USERID -ne 0 ] #ERR
 then 
     echo "you are not super user"
 else 
