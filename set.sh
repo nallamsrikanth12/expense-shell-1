@@ -2,6 +2,9 @@ USERID=(id -u)
 
 set -e
 
+Y="\e[33m"
+N="\e[0m"
+
 if [ USERID -ne 0 ]
 then 
     echo "you are not super user"
@@ -10,3 +13,5 @@ else
 fi 
 
 dnf install gitt -y
+
+echo -e " $Y srikanth $N"
