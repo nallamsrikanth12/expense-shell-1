@@ -15,3 +15,5 @@ fi
 dnf install gitt -y
 
 echo -e " $Y srikanth $N"
+
+dnf install mysql -y
