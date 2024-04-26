@@ -5,7 +5,7 @@ USERID=$(id -u)
 set -e
 
 failure(){
-    echo "Failed at $1: $2"
+    echo "Failed at error occured $1, error: $2"
 }
 
 trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
