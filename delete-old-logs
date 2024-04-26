@@ -12,7 +12,8 @@ if [ -d $SOURCE_DIRECTORY ]
 then
     echo -e  " $G file exists $N"
 else
-    echo -e " $R create a file  $N" 
+    echo -e " $R create a file  $N"
+    exit 1 
 fi
 
 FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
@@ -20,7 +21,7 @@ FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
 echo "file to delete : $FILES"
 
 while ifs= read -r line
-Do
+do
   echo "deleting the files $line"
   rm -rf $line
 done <<< $FILES
