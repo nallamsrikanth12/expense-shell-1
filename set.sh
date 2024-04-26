@@ -1,4 +1,4 @@
-USERID=(id -u)
+USERID=$(id -u)
 
 set -e
 
