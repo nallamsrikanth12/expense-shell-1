@@ -14,4 +14,10 @@ fi
 
 
 FILES=$( find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
-echo "deleted files :$FILES"
+
+
+while IFS= read -r line
+do 
+  echo "deleted files :$FILES"
+  rm -rf $line
+done <<< $FILES
