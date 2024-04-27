@@ -12,3 +12,6 @@ else
     echo -e "$R make sure create a directory $N"    
 fi    
 
+
+FILES=$( find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
+echo "deleted files :$FILES"
