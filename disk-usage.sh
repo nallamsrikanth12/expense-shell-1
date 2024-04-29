@@ -4,6 +4,7 @@ set -e
 
 DISK_USAGE=$(df -hT | grep xfs)
 DISK_THRESHOLD=6
+MESSAGE=""
 
 
 while IFS= read -r line
@@ -12,7 +13,7 @@ do
    FOLDER=$(echo $line | awk -F " " '{print $NF}')
    if [ $USAGE -ge $DISK_THRESHOLD ]
    then
-       echo "$FOLDER is morebthan $DISK_THRESHOLD current usage :$USAGE"
+       MESSAGE="$FOLDER is morebthan $DISK_THRESHOLD current usage :$USAGE"
    fi
 
 done <<< $DISK_USAGE
