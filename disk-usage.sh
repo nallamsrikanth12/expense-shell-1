@@ -1,6 +1,8 @@
 #!/bin/bash
 
-DISK_USAGE=S(df -hT | grep xfs)
+set -e
+
+DISK_USAGE=$(df -hT | grep xfs)
 DISK_THRESHOLD=6
 
 
