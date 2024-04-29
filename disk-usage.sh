@@ -13,6 +13,6 @@ do
    if [ $USAGE -ge $DISK_THRESHOLD ]
    then
        echo "$FOLDER is morebthan $DISK_THRESHOLD current usage :$USAGE"
-
+   fi
 
 done <<< $DISK_USAGE
